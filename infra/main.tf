@@ -10,9 +10,9 @@ resource "azurerm_resource_group" "rg" {
 }
 
 resource "azurerm_mysql_flexible_server" "mysql" {
-  name                = "mysql-cp2-565076-cac-${random_string.suffix.result}"
+  name                = "mysql-cp2-565076-clc-${random_string.suffix.result}"
   resource_group_name = azurerm_resource_group.rg.name
-  location            = "canadacentral"
+  location            = "chilecentral"
 
   administrator_login    = var.mysql_admin_username
   administrator_password = var.mysql_admin_password
