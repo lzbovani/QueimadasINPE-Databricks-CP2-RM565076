@@ -1,29 +1,29 @@
 variable "resource_group_name" {
   type        = string
-  description = "Nome do Resource Group"
-  default     = "rg-queimadas-dbx-aula"
+  description = "Resource Group do MySQL"
+  default     = "rg-mysql-cp2-565076"
 }
 
 variable "location" {
   type        = string
   description = "Região Azure"
-  default     = "chilecentral"
+  default     = "brazilsouth"
 }
 
 variable "mysql_admin_username" {
   type        = string
-  description = "Administrador do MySQL Flexible Server"
+  description = "Administrador do MySQL"
   default     = "queimadasadmin"
 }
 
 variable "mysql_admin_password" {
   type        = string
-  description = "Senha do admin do MySQL"
+  description = "Senha do administrador do MySQL"
   sensitive   = true
 }
 
 variable "database_name" {
   type        = string
-  description = "Nome do banco"
+  description = "Nome do banco de dados"
   default     = "queimadas"
 }
