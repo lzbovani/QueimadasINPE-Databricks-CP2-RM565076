@@ -10,7 +10,7 @@ resource "azurerm_resource_group" "rg" {
 }
 
 resource "azurerm_mysql_flexible_server" "mysql" {
-  name                = "mysql-cp2-565076-${random_string.suffix.result}"
+  name = "mysql-cp2-565076-eus-${random_string.suffix.result}"
   resource_group_name = azurerm_resource_group.rg.name
   location = "eastus"
 
