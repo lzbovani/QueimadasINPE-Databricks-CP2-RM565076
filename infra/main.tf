@@ -10,14 +10,14 @@ resource "azurerm_resource_group" "rg" {
 }
 
 resource "azurerm_mysql_flexible_server" "mysql" {
-  name = "mysql-cp2-565076-eus-${random_string.suffix.result}"
+  name                = "mysql-cp2-565076-cac-${random_string.suffix.result}"
   resource_group_name = azurerm_resource_group.rg.name
-  location = "eastus"
+  location            = "canadacentral"
 
   administrator_login    = var.mysql_admin_username
   administrator_password = var.mysql_admin_password
 
-  backup_retention_days       = 7
+  backup_retention_days        = 7
   geo_redundant_backup_enabled = false
 
   sku_name = "B_Standard_B1ms"
